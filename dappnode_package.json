@@ -1,0 +1,12 @@
+{
+  "name": "bitwarden.public.dappnode.eth",
+  "version": "0.1.0",
+  "description": "Bitwarden is a password manager that helps individuals and organizations securely store and manage passwords, credit card information, and other sensitive data. It offers features such as secure password generation, automatic password filling, and two-factor authentication to ensure the security of stored information. Bitwarden is available as a browser extension, desktop application, and mobile app, making it easy to access and use on multiple devices.",
+  "type": "service",
+  "author": "mgarciate",
+  "categories": ["Developer tools"],
+  "links": {
+    "homepage": "https://your-project-homepage-or-docs.io"
+  },
+  "license": "GPL-3.0"
+}

@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  bitwarden.public.dappnode.eth:
+    image: "vaultwarden/server:latest"
+    volumes:
+      - "bitwarden-data:/data"
+    environment:
+      - SIGNUPS_ALLOWED=true
+      - LOG_LEVEL=debug
+      - "DOMAIN=http://bitwarden.dappnode"
+    restart: unless-stopped
+volumes:
+  bitwarden-data: {}
