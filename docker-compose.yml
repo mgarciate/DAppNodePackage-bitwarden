@@ -7,7 +7,7 @@ services:
     environment:
       - SIGNUPS_ALLOWED=true
       - LOG_LEVEL=debug
-      - "DOMAIN=http://bitwarden.dappnode"
+      - "DOMAIN=http://bitwarden.public.dappnode"
     restart: unless-stopped
 volumes:
   bitwarden-data: {}
