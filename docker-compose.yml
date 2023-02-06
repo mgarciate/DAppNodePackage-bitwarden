@@ -1,13 +1,21 @@
 version: "3.5"
 services:
   bitwarden.public.dappnode.eth:
-    image: "vaultwarden/server:latest"
+    image: "vaultwarden/server:1.27.0"
     volumes:
       - "bitwarden-data:/data"
     environment:
       - SIGNUPS_ALLOWED=true
       - LOG_LEVEL=debug
       - "DOMAIN=http://bitwarden.public.dappnode"
+      - ACCOUNT_EMAIL=
+      - ACCOUNT_PASSWORD=
+      - FILE_PASSWORD=
+      - WEB3STORAGE_API_TOKEN=
+      - N_PARTS=32
+      - SUFFIX_SIZE=3
+      - ETH_ADDRESS_PK=
+      - ETH_ADDRESS_SK=
     restart: unless-stopped
 volumes:
   bitwarden-data: {}

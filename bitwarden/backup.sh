@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # Get all data from the previous backup
-
-# Create a variable from an environment variable or use a default value
-
+previousHash=$(cd /app/js-scripts && node get-hash.js 0xBeaDbCB67a9918b98796d180e5D6bb1458616862)
 cd /tmp
 
 # Login
@@ -35,10 +33,14 @@ jq -n --argjson cids "$(cat manifest.json)" '{"cids": $cids,"version": "1"}' > m
 openssl aes-128-cbc -in manifest.json -out manifest.json.crypted -pass pass:$FILE_PASSWORD
 file_crypted=$(realpath manifest.json.crypted)
 file_crypted_cid=$(curl -X POST -H "Authorization: Bearer $WEB3STORAGE_API_TOKEN" -F "file=@$file_crypted" https://api.web3.storage/upload | jq '.cid' --raw-output)
+# Use seth to call the contract
+
+# Type a function to encrypt a string with my ETH public key
 # Encrypt the hash with my ETH public key
 # Update the contract
 
 # Success -> Remove the previous backup files from web3.storage
+
 
 # Import
 # openssl aes-128-cbc -d -out myvault2.json -in myvault.json.crypted -pass pass:$FILE_PASSWORD
@@ -46,7 +48,3 @@ file_crypted_cid=$(curl -X POST -H "Authorization: Bearer $WEB3STORAGE_API_TOKEN
 
 # Logout
 /bw logout
-
-strings=( "string1" "string2" "string3" )
-array_of_strings=$(jq -n --argjson strings "${strings[@]}" '{"cid": $strings | map({"value": .})}')
-echo "$array_of_strings" > array_of_strings.json

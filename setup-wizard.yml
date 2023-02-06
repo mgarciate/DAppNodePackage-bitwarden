@@ -1,0 +1,52 @@
+version: "2"
+fields:
+  - id: accountEmail
+    target:
+      type: environment
+      name: ACCOUNT_EMAIL
+    title: ACCOUNT_EMAIL
+    description: >-
+      ACCOUNT_EMAIL description
+  - id: accountPassword
+    target:
+      type: environment
+      name: ACCOUNT_PASSWORD
+    title: ACCOUNT_PASSWORD
+    secret: true
+    description: >-
+      ACCOUNT_PASSWORD description
+  - id: filePassword
+    target:
+      type: environment
+      name: FILE_PASSWORD
+    title: FILE_PASSWORD
+    secret: true
+    description: >-
+      FILE_PASSWORD description
+  - id: web3storageApiToken
+    target:
+      type: environment
+      name: WEB3STORAGE_API_TOKEN
+    title: WEB3STORAGE_API_TOKEN
+    secret: true
+    description: >-
+      WEB3STORAGE_API_TOKEN description
+  - id: ethAddressPk
+    target:
+      type: environment
+      name: ETH_ADDRESS_PK
+    title: Ethereum Address Public Key
+    description: >-
+      Take the public key from your wallet
+    required: true
+    pattern: "^0x[a-fA-F0-9]{40}$"
+    patternErrorMessage: Must be a valid address (0x1fd16a...)
+  - id: ethAddressSk
+    target:
+      type: environment
+      name: ETH_ADDRESS_SK
+    title: Ethereum Address Private Key
+    secret: true
+    description: >-
+      Take the private key from your wallet (you can export it, keep it safe!)
+  

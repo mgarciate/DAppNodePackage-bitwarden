@@ -1,0 +1,2 @@
+# Run cron job to backup every day at 00:10
+10 0 * * * /usr/bin/backup.sh > /proc/1/fd/1 2>&1

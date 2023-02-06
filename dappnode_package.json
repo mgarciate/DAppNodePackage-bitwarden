@@ -1,12 +1,27 @@
 {
   "name": "bitwarden.public.dappnode.eth",
   "version": "0.1.0",
+  "upstreamVersion": "1.27.0",
+  "upstreamRepo": "dani-garcia/vaultwarden",
+  "upstreamArg": "UPSTREAM_VERSION",
+  "shortDescription": "Bitwarden is an open-source password management solution for individuals and organizations.",
   "description": "Bitwarden is a password manager that helps individuals and organizations securely store and manage passwords, credit card information, and other sensitive data. It offers features such as secure password generation, automatic password filling, and two-factor authentication to ensure the security of stored information. Bitwarden is available as a browser extension, desktop application, and mobile app, making it easy to access and use on multiple devices.",
   "type": "service",
-  "author": "mgarciate",
+  "author": "mgarciate (https://github.com/mgarciate)",
   "categories": ["Developer tools"],
   "links": {
-    "homepage": "https://your-project-homepage-or-docs.io"
+    "ui": "http://bitwarden.public.dappnode",
+    "homepage": "https://bitwarden.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgarciate/DAppNodePackage-bitwarden.git"
+  },
+  "backup": [
+    {
+      "name": "bitwarden-data",
+      "path": "/data"
+    }
+  ],
   "license": "GPL-3.0"
 }
